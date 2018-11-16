@@ -39,8 +39,10 @@ angular
         controller: 'DisplayList',
         controllerAs: 'c'
       })
+      
       .otherwise({
         redirectTo: '/'
       });
   });
+  
   

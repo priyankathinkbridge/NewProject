@@ -26,6 +26,33 @@ var app=angular.module('angularnewApp')
   .controller('AboutController',function(){
 
   })
+  .controller('PromiceCtrl',function(){
+    $scope.PromiceExample=function(){
+      let cleanroom =function(){
+        return new Promise (function(resolve,reject){
+            resolve("Clean the Room");
+        })
+    }
+    let reomvegarbedge=function(){
+        return new Promise (function(resolve,reject){
+            resolve("Remove Garbedge");
+        })
+    }
+    let winicecream=function(){
+        return new Promise(function(resolve,reject){
+            resolve("Finally Win IceCream");
+        })
+    }
+    cleanroom.then(function(result){
+        return reomvegarbedge(result);
+    }).then(function(result){
+        return winicecream(result);
+    }).then(function(result){
+        console.log("Finally Done"+result);
+    })
+    }
+
+  })
   .controller('EventCtrl',function($scope,eventData,$http,jsondata){
           
         /*  console.log(eventData);
