@@ -22,6 +22,16 @@ app.factory('eventData',function(){
           }
       }
   })
- app.factory('jsondata',function(){
-     
+ app.factory('jsondata',function($http){
+ 
+        return{
+            async:function(){
+                return  $http.get('http://api.jsonbin.io/b/5bd0494dadf9f5652a645c8d').then(function(response){
+                    return response;
+                })
+            }
+        }
+
+        
  })
+ 

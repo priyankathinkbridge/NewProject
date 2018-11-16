@@ -72,9 +72,16 @@ var app=angular.module('angularnewApp')
             /*jsondata.async().then(function(responce){
               $scope.mydata=responce.data[0].memberList;
             })*/
-            $http.get('http://api.jsonbin.io/b/5bd0494dadf9f5652a645c8d').then(function(responce){
-              $scope.mydata=responce.data[0].memberList;
-           })
+            setTimeout(function(){
+              jsondata.async().then(function(responce){
+                $scope.mydata=responce.data[0].memberList;
+              })
+            },3000)
+           
+            console.log("Wait for a While");
+            //$http.get('http://api.jsonbin.io/b/5bd0494dadf9f5652a645c8d').then(function(responce){
+              // $scope.mydata=responce.data[0].memberList;
+          //  })
               //console.log($scope.mydata);
              /*jsondata.async().then(function(responce) {
               $scope.mydata = responce.data[0].memberList;
