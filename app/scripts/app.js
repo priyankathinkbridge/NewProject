@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+//angular.module('angularnewApp', ['ui.bootstrap']);
 angular
   .module('angularnewApp', [
     'ngAnimate',
@@ -15,7 +16,12 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngAnimate',
+    'ngSanitize',
+    'ui.bootstrap',
+    
+   
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -38,6 +44,11 @@ angular
         templateUrl: 'views/diplayeventlist.html',
         controller: 'DisplayList',
         controllerAs: 'c'
+      })
+      .when('/webpage', {
+        templateUrl: 'views/first.html',
+        controller: 'WebPage',
+        controllerAs: 'w'
       })
       
       .otherwise({
