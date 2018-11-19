@@ -47,8 +47,8 @@ angular
       })
       .when('/webpage', {
         templateUrl: 'views/first.html',
-        controller: 'WebPage',
-        controllerAs: 'w'
+        controller: 'ModalDemoCtrl',
+        controllerAs:'$ctrl'
       })
       
       .otherwise({
